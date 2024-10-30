@@ -1,0 +1,341 @@
+<!-- Navbar section -->
+<nav class="bg-white shadow-md sticky top-0 w-full z-10">
+  <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo Section -->
+      <div class="flex items-center space-x-4">
+        <!-- Logo placed on the far left with minimal space -->
+        <a href="#" class="text-teal-600 font-bold text-3xl mr-14">Logo</a>
+        
+        <!-- Search Bar (visible on larger screens) -->
+        <div class="hidden lg:flex items-center border-b border-gray-400 pb-1">
+          <input
+            type="text"
+            placeholder="Search here..."
+            class="focus:outline-none text-gray-700"
+          />
+        </div>
+      </div>
+
+      <!-- Nav Links Section -->
+      <div class="hidden md:flex space-x-6 items-center">
+        <!-- Dropdown for Home -->
+        <div class="relative group">
+          <button class="flex items-center text-gray-700 font-medium hover:text-teal-600 focus:outline-none">
+            Home
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute left-0 hidden w-48 bg-white shadow-lg group-hover:block">
+            <!-- Dropdown content (empty) -->
+          </div>
+        </div>
+
+        <!-- Dropdown for Pages -->
+        <div class="relative group">
+          <button class="flex items-center text-gray-700 font-medium hover:text-teal-600 focus:outline-none">
+            Pages
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute left-0 hidden w-48 bg-white shadow-lg group-hover:block">
+            <!-- Dropdown content (empty) -->
+          </div>
+        </div>
+
+        <!-- Dropdown for Insurances -->
+        <div class="relative group">
+          <button class="flex items-center text-gray-700 font-medium hover:text-teal-600 focus:outline-none">
+            Insurances
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute left-0 hidden w-48 bg-white shadow-lg group-hover:block">
+            <!-- Dropdown content (empty) -->
+          </div>
+        </div>
+
+        <!-- Dropdown for Blog -->
+        <div class="relative group">
+          <button class="flex items-center text-gray-700 font-medium hover:text-teal-600 focus:outline-none">
+            Blog
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute left-0 hidden w-48 bg-white shadow-lg group-hover:block">
+            <!-- Dropdown content (empty) -->
+          </div>
+        </div>
+
+        <a href="#" class="text-gray-700 font-medium hover:text-teal-600">Contact Us</a>
+      </div>
+
+      <!-- Contact & Button Section -->
+      <div class="hidden lg:flex items-center space-x-6">
+        <!-- Phone Icon and Contact Number -->
+        <div class="flex items-center space-x-2 text-gray-700">
+          <img src="/assets/call.png" alt="Phone Icon" class="h-5 w-5 text-teal-600" />
+          <span>+ (111) 65 458 856</span>
+        </div>
+
+        <!-- Get a Quote Button -->
+        <a href="#" class="bg-teal-600 text-white px-4 py-2 rounded-md font-medium hover:bg-teal-700 flex items-center space-x-2">
+          <!-- Pen image placed before text -->
+          <img src="/assets/pen.png" alt="Pen Icon" class="h-5 w-5">
+          Get A Quote
+      </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button (click)="isOpen = !isOpen" class="text-gray-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div *ngIf="isOpen" class="md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#" class="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium">Home</a>
+        <a href="#" class="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium">Pages</a>
+        <a href="#" class="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium">Insurances</a>
+        <a href="#" class="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium">Blog</a>
+        <a href="#" class="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Insurance Promo section -->
+<section class="bg-gray-50 py-16 px-4 md:px-8">
+  <div class="max-w-full mx-auto flex flex-col md:flex-row items-center">
+    
+    <!-- Text Content Section -->
+    <div class="md:w-1/2 space-y-1 text-center md:text-left">
+      <h1 class="text-6xl font-bold text-gray-900 leading-tight">
+        Take The Worry Out Of 
+      </h1>
+      <h1 class="text-6xl font-bold text-gray-900 leading-tight">Life With 
+        <span class="text-teal-600">Insurance</span>
+      </h1>
+      <h1 class="text-6xl font-bold text-gray-900 leading-tight">Protection</h1>
+      <p class="text-gray-600 text-lg py-2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat <br> arcu nibh sed placerat elementum. Urna eu et purus et mi sit rhoncus. Id<br>
+        nisl quis arcu nulla leo nulla cras justo consectetur adipiscing elit.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+        <a href="#" class="bg-teal-600 text-white px-6 py-3 rounded-md font-medium hover:bg-teal-700 text-center">
+          Get Started
+        </a>
+        <a href="#" class="border border-teal-600 text-teal-600 px-6 py-3 rounded-md font-medium hover:bg-teal-50 text-center">
+          Contact Us
+        </a>
+        <img src="/assets/leaf.png" alt="Leaf">
+      </div>
+      
+    </div>
+
+    <!-- Image Section -->
+    <div class="md:w-1/2 mt-8 md:mt-0 flex justify-end">
+      <img src="/assets/man.png" alt="Family with insurance" class="w-full md:w-3/4"> <!-- Changed md:w-1/2 to md:w-3/4 -->
+    </div>
+    
+  </div>
+</section>
+
+<!-- Features section -->
+ <section>
+  <div class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-sm font-medium text-teal-600">OUR FEATURES</h2>
+      <h1 class="mt-2 text-3xl font-bold text-gray-800">
+        Better Digital Insurance Begins
+      </h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-800">Right Here
+      </h1>
+    </div>
+  
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <!-- Feature Card 1 -->
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition duration-200">
+        <div class="text-teal-600 mb-4">
+          <!-- Icon on the left side -->
+          <img src="assets/icon_1.png" alt="Money Back Icon" class="h-15 w-15">
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800">Money Back Guarantee</h3>
+          <p class="mt-2 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed.</p>
+        </div>
+      </div>
+  
+      <!-- Feature Card 2 -->
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition duration-200">
+        <div class="text-teal-600 mb-4">
+          <img src="assets/icon_2.png" alt="Money Back Icon" class="h-15 w-15">
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800">All Claims At Anytime</h3>
+          <p class="mt-2 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed.</p>
+        </div>
+      </div>
+  
+      <!-- Feature Card 3 -->
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition duration-200">
+        <div class="text-teal-600 mb-4">
+          <img src="assets/icon_3.png" alt="Money Back Icon" class="h-15 w-15">
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800">Digital Insurance Policy</h3>
+          <p class="mt-2 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed.</p>
+        </div>
+      </div>
+  
+      <!-- Feature Card 4 -->
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition duration-200">
+        <div class="text-teal-600 mb-4">
+          <img src="assets/icon_4.png" alt="Money Back Icon" class="h-15 w-15">
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800">Direct Payment App</h3>
+          <p class="mt-2 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services section -->
+ <section>
+  <div class="text-center py-8">
+    <h3 class="text-xl text-teal-600 font-semibold uppercase mb-2">Insurance Services</h3>
+    <h1 class="text-3xl font-bold text-gray-800 mb-4">Take The Worry Out Of Life With <br> Insurance Protection</h1>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+    <!-- Card 1: Business Insurance -->
+    <div class="relative w-full h-80 rounded-lg overflow-hidden shadow-lg max-w-xs ml-16">
+      <!-- Background Image -->
+      <img src="/assets/business_insurance.jpeg" alt="Business Insurance Image" class="absolute inset-0 w-full h-full object-cover" />
+      
+      <!-- Overlay Text Box -->
+      <div class="absolute bottom-4 left-4 bg-teal-600 bg-opacity-80 px-12 py-4 rounded-lg">
+        <p class="text-sm font-semibold tracking-wider uppercase text-white">Insurance • Vehicle</p>
+        <h2 class="text-lg font-semibold text-white mt-1">Business Insurance</h2>
+      </div>
+    </div>
+  
+    <!-- Card 2: Vehicle Insurance -->
+    <div class="relative w-full h-80 rounded-lg overflow-hidden shadow-lg max-w-xs">
+      <!-- Background Image -->
+      <img src="/assets/vehicle_insurance.jpeg" alt="Vehicle Insurance Image" class="absolute inset-0 w-full h-full object-cover" />
+      
+      <!-- Overlay Text Box -->
+      <div class="absolute bottom-4 left-4 bg-teal-600 bg-opacity-80 px-12 py-4 rounded-lg">
+        <p class="text-sm font-semibold tracking-wider uppercase text-white">Insurance • Vehicle</p>
+        <h2 class="text-lg font-semibold text-white mt-1">Vehicle Insurance</h2>
+      </div>
+    </div>
+  
+    <!-- Card 3: Car Insurance -->
+    <div class="relative w-full h-80 rounded-lg overflow-hidden shadow-lg max-w-xs">
+      <!-- Background Image -->
+      <img src="/assets/car_insurance.jpg" alt="Car Insurance Image" class="absolute inset-0 w-full h-full object-cover" />
+      
+      <!-- Overlay Text Box -->
+      <div class="absolute bottom-4 left-4 bg-teal-600 bg-opacity-80 px-14 py-4 rounded-lg">
+        <p class="text-sm font-semibold tracking-wider uppercase text-white">Insurance • Car</p>
+        <h2 class="text-lg font-semibold text-white mt-1">Car Insurance</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-6 py-6">
+    <p class="text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed <br>placerat elementum.
+    Urna eu et purus et mi sit rhoncus
+    <a href="#" class="text-teal-600 font-medium hover:underline">View All</a>
+  </p>
+  </div>
+</section>
+
+<!-- Call to Action section -->
+ <section class="bg-white text-center py-12 relative">
+    <!-- Top Text and Title -->
+    <h2 class="text-teal-600 text-sm font-medium mb-2">READY TO GET STARTED</h2>
+    <h1 class="text-gray-800 text-3xl md:text-4xl font-bold mb-4">
+      Get The Latest Insurance News In <br> Minutes
+    </h1>
+    <p class="text-gray-600 mb-8">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh <br> sed placerat elementum.
+      Urna eu et purus et mi sit rhoncus..
+    </p>
+  
+    <!-- Subscription Box Container -->
+    <div class="relative flex justify-center items-center space-x-4">
+      <!-- Subscription Form -->
+      <div class="flex items-center">
+        <input type="email" placeholder="Email address" 
+               class="border border-gray-300 rounded-l-lg px-6 py-2 bg-gray-100 focus:outline-none focus:ring focus:ring-teal-200" />
+        <button class="bg-teal-600 text-white rounded-r-lg px-6 py-2 flex items-center space-x-2">
+          <img src="/assets/subscribe.png" alt="Pen Icon" class="h-5 w-5">
+          Subscribe
+        </button>
+      </div>
+    </div>
+ </section>
+
+ <!-- Footer Section -->
+ <section>
+  <div class="bg-sky-50 px-6 py-14 mt-8">
+    <div class="flex justify-around">
+      <!-- Logo and Contact Information -->
+      <div>
+        <h2 class="text-teal-600 font-bold text-4xl  py-2 ">Logo</h2>
+        <p class="text-gray-600 font-sans text-sm py-1">Location: Isr Street gilrt awam juim</p>
+        <p class="text-gray-600 font-sans text-sm py-1">Contact: +9 5555559909</p>
+        <p class="text-gray-600 font-sans text-sm py-1">Time: (9am-5pm EST, Monday - Friday)</p>
+        <p class="text-gray-600 font-sans text-sm py-1">Email: youme&#64;Rule.com</p>
+      </div>
+  
+      <!-- Company Links -->
+      <div>
+        <h2 class="text-gray-800 font-bold text-2xl"  py-2>Company</h2>
+        <ul class="text-gray-600 font-sans text-sm py-3 space-y-2">
+          <li>Case Studies</li>
+          <li>Case Details</li>
+          <li>Privacy Policy</li>
+          <li>Services</li>
+        </ul>
+      </div>
+  
+      <!-- Explore Links -->
+      <div>
+        <h2 class="text-gray-800 font-bold text-2xl"  py-2>Explore</h2>
+        <ul class="text-gray-600 font-sans text-sm py-3 space-y-2">
+          <li>About Us</li>
+          <li>Blog And News</li>
+          <li>Blog Details</li>
+          <li>Pricing</li>
+        </ul>
+      </div>
+  
+      <!-- Insurance Links -->
+      <div>
+        <h2 class="text-gray-800 font-bold text-2xl" py-2>Insurance</h2>
+        <ul class="text-gray-600 font-sans text-sm py-3 space-y-2">
+          <li>Health Insurance</li>
+          <li>Car Insurance</li>
+          <li>Business Insurance</li>
+          <li>Life Insurance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ </section>
